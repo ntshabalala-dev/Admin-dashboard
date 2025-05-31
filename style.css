@@ -1,0 +1,36 @@
+body,
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: aqua;
+    grid-row: 1 / span 5;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr 1fr
+}
+
+.projects {
+    padding: 1rem;
+    background-color: lightgray;
+}
+
+.nav,
+.header {
+    background-color: white
+}
+
+.container>* {
+    padding: 10px;
+}
