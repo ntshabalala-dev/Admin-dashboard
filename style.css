@@ -22,10 +22,10 @@ html {
     grid-template-rows: repeat(3, min-content);
 }
 
-.sidebar img {
+.sidebar img,
+.icons img {
     width: 30px;
     height: 30px;
-    color: white;
 }
 
 .sidebar a {
@@ -38,6 +38,7 @@ html {
 .sidebar>div {
     display: grid;
     grid-template-columns: 40px auto;
+    column-gap: .2rem;
 }
 
 .container {
@@ -105,4 +106,42 @@ li {
 .nav__user {
     display: flex;
     align-items: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+}
+
+.projects__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.projects__cards>.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-rows: 150px min-content;
+    gap: 10px;
+}
+
+.information__heading {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.information {
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.icons {
+    justify-self: end;
 }
