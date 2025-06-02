@@ -1,6 +1,7 @@
 body,
 html {
     height: 100%;
+    background-color: #ccc;
 }
 
 * {
@@ -44,8 +45,8 @@ html {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto auto 1fr 1fr 1fr
+    grid-template-columns: .7fr 3fr;
+    grid-template-rows: auto auto 1fr 1fr 1fr;
 }
 
 .projects {
@@ -108,25 +109,27 @@ li {
     align-items: center;
 }
 
-.projects {
+.projects-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     column-gap: 20px;
 }
 
 .projects__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.projects__cards>.card {
+.card {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.projects__cards>.card {
     display: grid;
     grid-template-rows: 150px min-content;
     gap: 10px;
@@ -144,4 +147,50 @@ li {
 
 .icons {
     justify-self: end;
+}
+
+.projects__cards,
+.sidebar__cards,
+.projects__list,
+.projects__sidebar {
+    padding-top: 10px;
+}
+
+
+.sidebar__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-rows: repeat(2, min-content);
+}
+
+
+
+.projects__sidebar {
+    /* border: red 1px solid; */
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.trend img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 10px;
+}
+
+.trending__card {
+    margin-top: 10px;
+}
+
+.trending__card>div:not(:last-child) {
+    margin-bottom: 10px;
 }
