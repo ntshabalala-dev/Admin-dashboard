@@ -1,7 +1,7 @@
 body,
 html {
     height: 100%;
-    background-color: #ccc;
+    background-color: rgb(226, 232, 240);
 }
 
 * {
@@ -12,7 +12,7 @@ html {
 }
 
 .sidebar {
-    background-color: aqua;
+    background-color: rgb(25, 146, 212);
     grid-row: 1 / span 5;
     padding-left: 1rem;
     padding-top: 10px;
@@ -59,14 +59,26 @@ html {
     background-color: white
 }
 
-.container>*:not(.sidebar) {
+.container>*:not(.sidebar, .header, .nav) {
     padding: 10px;
 }
 
 .search__profile {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.header__search {
+    flex: 2;
+}
+
+.header__profile {
+    flex: 1;
+    display: flex;
+}
+
+.notification__icon {
+    margin-left: auto;
 }
 
 .projects {
@@ -89,14 +101,30 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 li {
     list-style: none;
+    background-color: rgb(25, 146, 212);
+    border-radius: 2rem;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    width: 70px;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .nav__links {
     gap: 20px;
+}
+
+.nav__links>li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
 }
 
 .nav__user {
@@ -164,19 +192,27 @@ li {
     grid-template-rows: repeat(2, min-content);
 }
 
-
-
-.projects__sidebar {
-    /* border: red 1px solid; */
-}
-
 hr {
     margin: 10px 0;
 }
 
 .trend img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav__user img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header__image {
+    width: 35px;
+    height: 35px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -193,4 +229,25 @@ hr {
 
 .trending__card>div:not(:last-child) {
     margin-bottom: 10px;
+}
+
+.search__profile>div>img:first-child {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.utility-padding {
+    padding: 7px 2rem;
+}
+
+input[type="search"] {
+    border-radius: 3rem;
+    border: 1px solid #ccc;
+    background-color: #eee9e9;
+    font-size: 0.9rem;
+    width: 70%;
+    outline: none;
+    padding: 1.8px 6px;
 }
