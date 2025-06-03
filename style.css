@@ -59,7 +59,7 @@ html {
     background-color: white
 }
 
-.container>*:not(.sidebar, .header, .nav) {
+.container>*:not(.sidebar, .header, .nav, .projects-container) {
     padding: 10px;
 }
 
@@ -142,6 +142,9 @@ li {
     grid-template-columns: 3fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
     column-gap: 20px;
+    padding-right: clamp(0.8rem, -3.385rem + 6.538vw, 2.5rem);
+    padding-left: 1.3rem;
+    padding-block: 10px;
 }
 
 .projects__cards {
@@ -205,8 +208,8 @@ hr {
 }
 
 .nav__user img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -259,7 +262,8 @@ p.heading {
 }
 
 .announcement__card p:first-child,
-.trend .user__info p:nth-child(1) {
+.trend .user__info p:nth-child(1),
+.user__info p:first-child {
     font-weight: 700;
     font-size: .8rem;
 }
@@ -278,4 +282,12 @@ p.heading {
 .projects__cards .information__text {
     color: #656565;
     font-size: .9rem;
+}
+
+/* .sidebar__cards {
+    padding-right: clamp(0.8rem, -3.385rem + 6.538vw, 2.5rem);
+} */
+
+p.user__name {
+    font-weight: bold;
 }
