@@ -153,7 +153,7 @@ li {
 .card {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -161,6 +161,7 @@ li {
     display: grid;
     grid-template-rows: 150px min-content;
     gap: 10px;
+    border-left: 6px solid rgb(227, 162, 43);
 }
 
 .information__heading {
@@ -246,8 +247,35 @@ input[type="search"] {
     border-radius: 3rem;
     border: 1px solid #ccc;
     background-color: #eee9e9;
-    font-size: 0.9rem;
+    font-size: .9rem;
     width: 70%;
     outline: none;
     padding: 1.8px 6px;
+}
+
+p.heading {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.announcement__card p:first-child,
+.trend .user__info p:nth-child(1) {
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.announcement__card p:nth-child(2),
+.trend .user__info p:nth-child(2) {
+    font-size: .7rem;
+    color: #656565;
+}
+
+.trend .user__info p:nth-child(1) {
+    font-weight: 700;
+    font-size: .7rem;
+}
+
+.projects__cards .information__text {
+    color: #656565;
+    font-size: .9rem;
 }
