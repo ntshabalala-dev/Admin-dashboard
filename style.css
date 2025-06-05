@@ -34,6 +34,7 @@ html {
     color: white;
     align-self: center;
     font-weight: bold;
+    font-size: .9rem;
 }
 
 .sidebar>div {
@@ -94,7 +95,6 @@ html {
 
 img {
     max-width: 100%;
-    border-radius: 50%;
 }
 
 .nav {
@@ -290,4 +290,26 @@ p.heading {
 
 p.user__name {
     font-weight: bold;
+}
+
+.sidebar>div {
+    row-gap: .8rem;
+}
+
+.sidebar__body img:first-child~img,
+.sidebar__footer img {
+    padding: 0 6px;
+}
+
+.sidebar__body img:first-child {
+    padding: 0 3.7px;
+}
+
+.card .icons {
+    display: flex;
+    gap: 5px;
+}
+
+.card .icons img {
+    padding: 0 6px;
 }
